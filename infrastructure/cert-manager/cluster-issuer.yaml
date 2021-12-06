@@ -7,6 +7,10 @@ metadata:
 spec:
   dependsOn:
     - name: cert-manager
+  interval: 10m0s
   path: ./infrastructure/cert-manager/cluster-issuer
   prune: true
   validation: client
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
