@@ -13,6 +13,7 @@ spec:
         tls:
           - hosts:
               - grafana.sdsc-dev.k117.org
+            secretName: grafana-tls
     prometheus:
       ingress:
         hosts:
@@ -20,3 +21,4 @@ spec:
         tls:
           - hosts:
               - prom.sdsc-dev.k117.org
+            secretName: prom-tls
