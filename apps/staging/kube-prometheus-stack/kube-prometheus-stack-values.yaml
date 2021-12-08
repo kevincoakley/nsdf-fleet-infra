@@ -4,6 +4,7 @@ kind: HelmRelease
 metadata:
   name: kube-prometheus-stack
   namespace: prom
+spec:
   values:
     grafana:
       ingress:
