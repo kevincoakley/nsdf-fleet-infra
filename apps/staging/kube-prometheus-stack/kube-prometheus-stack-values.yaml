@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: prom
+  values:
+    grafana:
+      ingress:
+        hosts:
+          - grafana.sdsc-dev.k117.org
+        tls:
+          - hosts:
+              - grafana.sdsc-dev.k117.org
+    prometheus:
+      ingress:
+        hosts:
+          - prom.sdsc-dev.k117.org
+        tls:
+          - hosts:
+              - prom.sdsc-dev.k117.org

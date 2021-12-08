@@ -1,0 +1,9 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: prom
+resources:
+  - ../../base/kube-prometheus-stack
+patchesStrategicMerge:
+  - grafana-persistent-volume.yaml
+  - kube-prometheus-stack-values.yaml

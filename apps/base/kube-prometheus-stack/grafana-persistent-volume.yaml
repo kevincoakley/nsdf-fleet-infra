@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pvc-prom-grafana-0
+spec:
+  capacity:
+    storage: 10Gi
+  storageClassName: grafana
